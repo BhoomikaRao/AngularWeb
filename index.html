@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="quizApp">
+<head>
+  <meta charset="utf-8" />
+  <title>QuizApp</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body>
+	<div style="background-color: black;"><br><br></div>
+	<br>	
+	<p class="title" style="background-color:teal; font-family:verdana;font-size:80px;" >Quiz-App</p>
+	<!--NAVIGATION BAR -->
+	<nav class="navbar navbar-inverse">
+  	<div class="container-fluid">
+    	<div class="navbar-header">
+      	<a class="navbar-brand" href="index.html">Quiz-App</a>
+    	</div>
+    	<ul class="nav navbar-nav">
+      		<li class="active"><a href="index.html">Home</a></li>
+      		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Chemistry Quiz <span class="caret"></span></a>
+        
+	<ul class="dropdown-menu">  
+		<li><a href="#">organic Quiz</a></li>
+        	<li><a href="#">inorganic Quiz</a></li>
+        	<li><a href="#">physical chemistry Quiz</a></li>
+        </ul>
+      	</li>
+     	
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="mainpage.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="mainpage.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>  
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4" style="text-align:left; font-family: verdana; font-size: 20px;">
+   			<quiz/>
+		</div>
+		<div class="col-md-4"></div>
+  	</div>
+
+	<!--FOOTER-->	  
+<br><br>
+<div class="row">
+	
+	<div class="col-md-6" style="background-color:black; color:white; font-family: franklin gothic; font-size: 16px; text-align: center;"><br><br><br><br>
+	<b><i class="fa fa-map-marker" aria-hidden="true" style="color:white;"></i>  ADDRESS:</b> <br><b style="color:grey;"> Unit 2, #930 G, <br> 1st D Main Road, <br> Girinagar 2nd phase, <br> Banashankari 3rd stage, <br> Bangalore - 560085 </b>
+	<br><br><br><br><br><br><br>
+	</div>
+	
+	<div class="col-md-6" style="background-color:black; color:white; font-family: franklin gothic; font-size: 16px; text-align: center;"><br><br><br><br>
+	<b>Developers: </b> <br> <b style="color:grey;"><i class="fa fa-thumb-tack" aria-hidden="true" style="color:grey;"></i> Bhoomika R Rao <br> 01FB15ECS069 <br><br> <i class="fa fa-thumb-tack" aria-hidden="true" style="color:grey;"></i> Priyanka <br> 01FB15ECS217 <br><br> <i class="fa fa-thumb-tack" aria-hidden="true" style="color:grey;"></i> </b>
+	<br><br><br><br>
+	</div>
+</div>	
+
+</body>
+
+</html>

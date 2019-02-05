@@ -1,0 +1,69 @@
+<div style="background-color: #aeb7c4;" class="quiz-area" ng-show="inProgress">
+	<div ng-show="!quizOver">
+		<br><br>
+		<p style="font-family:Verdana; font-size:24px; margin-left:20px; id="question">{{question}}</p>
+		<ul id="options">
+			<li ng-repeat="option in options">
+				<label>
+					<input style="font-family: Verdana; font-size: 20px;" type="radio" name="answer" value="{{option}}">
+					{{option}}
+				</label>
+			</li>
+		</ul>
+		<button class="btn info" ng-click="checkAnswer()" ng-show="answerMode" style="margin-left:20px;">Submit</button>
+
+		<div ng-show="!answerMode">
+			<br><b><span style="color: green; padding: 14px 28px; font-size: 15px; font-family: verdana;" ng-show="correctAns">THAT IS CORRECT!</span></b><br>
+			<b><span style="color: red; padding: 14px 28px; font-size: 15px; font-family: verdana;" 
+				ng-show="!correctAns">SORRY, THAT IS AN INCORRECT ANSWER.</span><b><br><br>
+			<button class="btn info" ng-click="nextQuestion()" style="margin-left:20px;" class="next-question">Next</button>
+		</div>
+	</div>
+
+	<div ng-show="quizOver">
+		<br>
+		<p style="font-family: Verdana; font-size: 30px; text-align:center; margin-top: 20px;">Quiz is over</p>
+		<br><br>
+		<center><button class="btn info" ng-click="reset()">Play again</button></center>
+	</div>
+	<br>
+	<div id="score" style="font-family: Verdana; font-size: 30px;">
+		Score: {{score}}
+	</div>
+	<br>
+</div>
+
+<div class="intro" ng-show="!inProgress" style="background-color:#aeb7c4; border: 20px double black">
+	<br>
+	<p style="font-family: Verdana; font-size: 30px; text-align:center">Welcome to the QuizApp</p>
+	<br>
+	<p style="font-family: Verdana; font-size: 20px; text-align:center"> Test your chemistry knowledge with our CHEM Quiz, the test currently contains 10 questions.</p> 	 <p style="font-family: Verdana; font-size: 20px; text-align:center">You will get 10 point for each correct answer. At the end of the Quiz, your total score will be displayed. Maximum score is 100 points. If you don't get the full score, you'll have an option to try again.</p>
+	<p style="font-family: Verdana; font-size: 20px; text-align:center">Start the quiz now by clicking on the button below.</p>
+	<br><br><br>
+	<center><button id="startQuiz" class="btn info" style="text-align:center" ng-click="start()">Start the Quiz</button></center>
+	<br><br>
+</div>
+
+<style>
+
+.btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Blue */
+.info {
+  border-color: teal;
+  color: teal;
+}
+
+.info:hover {
+  background: teal;
+  color: white;
+}
+
+</style>
